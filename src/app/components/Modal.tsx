@@ -236,7 +236,7 @@ export default function ResearchModal() {
                             type="button"
                             onClick={() => generateStage(index)}
                             className="text-xs text-blue-600 hover:underline"
-                          >+ Add</button>
+                          >Submit a question</button>
                         ) : q.loading ? (
                           <div className="text-xs text-gray-600">Loading...</div>
                         ) : null}
