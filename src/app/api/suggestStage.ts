@@ -6,12 +6,8 @@ export async function suggestStage({
   question: string;
   existingJourneyStages: string[];
   objective: string;
-}) {
-  console.log("Suggesting stage for question:", question);
-  console.log("Existing journey stages:", existingJourneyStages);
-  console.log("Objective:", objective);
-  
-  const res = await fetch("https://aiback-production.up.railway.app/llm/suggest", {
+}) { 
+  const res = await fetch("https://aibackend-production-bf6e.up.railway.app/llm/suggest", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question, objective, existingJourneyStages }),

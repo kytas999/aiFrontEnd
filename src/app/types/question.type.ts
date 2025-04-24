@@ -7,4 +7,5 @@ export interface ResearchQuestion {
   error: string | null;
   disabled: boolean;
   manuallyEditing: boolean;
+  source?: 'AI' | 'manual' | null;
 }
