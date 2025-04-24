@@ -207,7 +207,9 @@ export default function ResearchModal() {
                         ) : q.error || q.manuallyEditing ? (
                           <div className="relative">
                             <input
-                              ref={(el) => (stageInputs.current[index] = el)}
+                              ref={(el) => {
+                                stageInputs.current[index] = el;
+                              }}
                               value={q.stage}
                               onFocus={() => setDropdownOpenIndex(index)}
                               onChange={(e) => handleStageChange(index, e.target.value)}
